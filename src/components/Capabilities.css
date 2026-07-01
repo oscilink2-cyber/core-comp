@@ -1,0 +1,265 @@
+.capabilities-section {
+  padding: 6rem 0 3rem 0;
+  background-color: #ffffff;
+  color: #111827;
+  border-top: 1px solid #e5e7eb;
+}
+
+.cap-editorial-layout {
+  display: flex;
+  gap: 6rem;
+  align-items: flex-start;
+}
+
+/* Left Column: Sticky Header */
+.cap-sticky-header {
+  flex: 0 0 35%;
+  position: sticky;
+  top: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cap-badge {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  color: #4b5563;
+}
+
+.cap-title {
+  font-size: 3.25rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+  color: #111827;
+}
+
+.cap-desc {
+  font-size: 1.1rem;
+  color: #6b7280;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.cap-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.cap-btn:hover {
+  opacity: 0.7;
+}
+
+/* Right Column: List Items */
+.cap-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cap-list-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 3.5rem 2rem;
+  border-top: 1px solid #e5e7eb;
+  transition: background-color 0.4s ease;
+}
+
+.cap-list-item:last-child {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Animated Top Line on Hover */
+.cap-list-item::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cap-list-item:hover::before {
+  width: 100%;
+}
+
+.cap-list-item:hover {
+  background-color: #f9fafb;
+}
+
+.cap-item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+/* New Number Tag (Top Right) */
+.cap-item-number-tag {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #f3f4f6; /* Very light grey */
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+  transition: color 0.4s ease;
+}
+
+.cap-list-item:hover .cap-item-number-tag {
+  color: #e5e7eb;
+}
+
+/* Icon Box */
+.cap-item-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  color: var(--primary-color);
+  transition: background 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+.cap-list-item:hover .cap-item-icon-box {
+  background: #f0f9ff;
+  border-color: #bae6fd;
+}
+
+/* Content Area */
+.cap-item-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.cap-item-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+
+.cap-item-text {
+  font-size: 1.05rem;
+  color: #6b7280;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* Minimal Metric Bar */
+.cap-item-metric {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: auto;
+}
+
+.metric-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #111827;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  width: 160px;
+  flex-shrink: 0;
+}
+
+.metric-bar-bg {
+  flex: 1;
+  height: 4px;
+  background: #e5e7eb;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.metric-bar-fill {
+  height: 100%;
+  background: var(--primary-color);
+  border-radius: 2px;
+  width: 0; 
+  /* Fallback if JS isn't controlling it */
+  animation: fill-bar 1.5s ease forwards;
+}
+
+.metric-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  width: 40px;
+  text-align: right;
+}
+
+@keyframes fill-bar {
+  from { width: 0; }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cap-editorial-layout {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  .cap-sticky-header {
+    position: relative;
+    top: 0;
+    flex: none;
+    width: 100%;
+  }
+
+  .cap-list-item {
+    gap: 2rem;
+    padding: 3rem 0;
+  }
+  
+  .cap-item-number {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cap-title {
+    font-size: 2.5rem;
+  }
+  .cap-list-item {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .cap-item-number {
+    font-size: 4rem;
+  }
+  .cap-item-content {
+    padding-right: 0;
+  }
+  .cap-item-metric {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .metric-label {
+    width: auto;
+  }
+  .metric-bar-bg {
+    width: 100%;
+  }
+}

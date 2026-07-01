@@ -1,0 +1,177 @@
+.hero {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: var(--bg-color);
+  overflow: hidden;
+  padding: 4rem 0;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 600px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #374151;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.yc-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  background-color: #ea580c;
+  color: white;
+  font-weight: 700;
+  font-size: 0.75rem;
+  margin: 0 0.1rem;
+}
+
+.hero-title {
+  margin-bottom: 1.5rem;
+  color: #000000;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 520px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-graphic {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.graphic-img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  object-fit: contain;
+  /* Add a subtle blend mode or filter if needed, but generated image should be fine */
+}
+
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .hero-content {
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+/* Logo Strip Styles */
+.logo-strip {
+  width: 100%;
+  background-color: #fafafa;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  /* Faint background pattern */
+  background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.logo-strip-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+}
+
+.logo-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 1rem;
+  border-right: 1px solid #e5e5e5;
+  transition: background-color 0.3s ease;
+}
+
+.logo-item:last-child {
+  border-right: none;
+}
+
+.logo-item:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.metric-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.metric-number {
+  color: #1f2937;
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.metric-label {
+  color: #6b7280;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 1024px) {
+  .logo-strip-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .logo-item:nth-child(even) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-strip-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

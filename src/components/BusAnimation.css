@@ -1,0 +1,349 @@
+.system-animation-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  background: #0f1115;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -10px rgba(0,0,0,0.3);
+  border: 1px solid #1f2937;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Header */
+.sys-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid #1f2937;
+}
+
+.sys-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #10b981;
+  letter-spacing: 0.1em;
+}
+
+.sys-status-dot {
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #10b981;
+  animation: pulse-dot 1.5s infinite alternate;
+}
+
+.sys-id {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-family: monospace;
+}
+
+/* Grid Layout */
+.sys-grid {
+  display: flex;
+  flex: 1;
+}
+
+/* Left: Radar Panel */
+.sys-radar-panel {
+  flex: 1;
+  border-right: 1px solid #1f2937;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2rem;
+  background: radial-gradient(circle at center, rgba(31, 41, 55, 0.4) 0%, transparent 70%);
+}
+
+.radar-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #374151;
+}
+
+.radar-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.circle-1 { width: 140px; height: 140px; }
+.circle-2 { width: 80px; height: 80px; }
+.circle-3 { width: 20px; height: 20px; background: rgba(59, 130, 246, 0.3); }
+
+.radar-sweep {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, transparent 70%, rgba(59, 130, 246, 0.4) 100%);
+  animation: spin 4s linear infinite;
+}
+
+.radar-target {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #ea580c;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #ea580c;
+}
+
+.target-1 { top: 30%; left: 40%; animation: ping-fade 4s infinite; animation-delay: 0.5s; }
+.target-2 { top: 70%; left: 60%; animation: ping-fade 4s infinite; animation-delay: 1.5s; }
+.target-3 { top: 40%; left: 80%; animation: ping-fade 4s infinite; animation-delay: 2.5s; }
+
+.target-ping {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ea580c;
+  border-radius: 50%;
+  animation: ping 4s infinite;
+}
+
+.radar-label {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  color: #9ca3af;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* Right: Hardware Panel */
+.sys-hardware-panel {
+  flex: 1.2;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* CPU Core */
+.cpu-core-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  height: 80px;
+}
+
+.cpu-core {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: #1f2937;
+  border: 2px solid #ea580c;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(234, 88, 12, 0.3);
+  z-index: 2;
+}
+
+.cpu-icon {
+  color: #ea580c;
+}
+
+.cpu-pulse-ring {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border: 2px solid #ea580c;
+  border-radius: 16px;
+  animation: cpu-pulse 2s infinite;
+  z-index: 1;
+}
+
+.cpu-lines {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.left-lines { right: calc(50% + 25px); }
+.right-lines { left: calc(50% + 25px); }
+
+.c-line {
+  height: 2px;
+  width: 40px;
+  background: #374151;
+  position: relative;
+  overflow: hidden;
+}
+
+.c-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 100%;
+  background: #ea580c;
+  animation: data-flow 1.5s infinite;
+}
+
+.l-2::after { animation-delay: 0.7s; }
+.r-1::after { animation-delay: 0.3s; background: #3b82f6; }
+.r-2::after { animation-delay: 0.9s; background: #3b82f6; }
+
+
+/* Metrics */
+.sys-metrics {
+  margin-bottom: 2rem;
+}
+
+.metric-row {
+  margin-bottom: 1rem;
+}
+
+.metric-label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+  color: #9ca3af;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.metric-bar-bg {
+  width: 100%;
+  height: 4px;
+  background: #374151;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.metric-bar {
+  height: 100%;
+  border-radius: 2px;
+}
+
+.bar-orange {
+  background: #ea580c;
+  animation: load-bar-1 4s infinite alternate;
+}
+
+.bar-blue {
+  background: #3b82f6;
+  animation: load-bar-2 3s infinite alternate;
+}
+
+/* Terminal Logs */
+.sys-terminal {
+  background: #000000;
+  border: 1px solid #1f2937;
+  border-radius: 8px;
+  padding: 1rem;
+  font-family: monospace;
+  font-size: 0.65rem;
+  color: #9ca3af;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+.term-line {
+  margin-bottom: 0.4rem;
+  opacity: 0;
+}
+
+.t-time { color: #6b7280; }
+.t-info { color: #3b82f6; }
+.t-warn { color: #ea580c; }
+.t-succ { color: #10b981; }
+
+.animate-log-1 { animation: log-appear 6s infinite; animation-delay: 0s; }
+.animate-log-2 { animation: log-appear 6s infinite; animation-delay: 2s; }
+.animate-log-3 { animation: log-appear 6s infinite; animation-delay: 4s; }
+
+/* Animations */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes ping-fade {
+  0%, 100% { opacity: 0; }
+  10%, 40% { opacity: 1; }
+}
+
+@keyframes ping {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(2); opacity: 0; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+@keyframes pulse-dot {
+  0% { opacity: 0.5; box-shadow: 0 0 4px #10b981; }
+  100% { opacity: 1; box-shadow: 0 0 12px #10b981; }
+}
+
+@keyframes cpu-pulse {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(1.3); opacity: 0; }
+}
+
+@keyframes data-flow {
+  0% { transform: translateX(-20px); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateX(50px); opacity: 0; }
+}
+
+@keyframes load-bar-1 {
+  0% { width: 30%; }
+  100% { width: 85%; }
+}
+
+@keyframes load-bar-2 {
+  0% { width: 50%; }
+  100% { width: 95%; }
+}
+
+@keyframes log-appear {
+  0%, 5% { opacity: 0; transform: translateY(10px); }
+  10%, 80% { opacity: 1; transform: translateY(0); }
+  90%, 100% { opacity: 0; transform: translateY(-10px); }
+}
+
+@media (max-width: 768px) {
+  .sys-grid {
+    flex-direction: column;
+  }
+  .sys-radar-panel {
+    border-right: none;
+    border-bottom: 1px solid #1f2937;
+    padding: 1.5rem;
+  }
+}

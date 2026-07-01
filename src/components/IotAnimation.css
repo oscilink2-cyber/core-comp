@@ -1,0 +1,251 @@
+.iot-animation-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.iot-bg-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.gradient-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.15;
+  animation: float-blob 15s ease-in-out infinite alternate;
+}
+
+.blob-1 {
+  width: 300px;
+  height: 300px;
+  background: #ea580c;
+  top: 100px;
+  left: 100px;
+}
+
+.blob-2 {
+  width: 250px;
+  height: 250px;
+  background: #3b82f6;
+  bottom: 50px;
+  right: 50px;
+  animation-delay: -5s;
+}
+
+.iot-svg-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.link-path {
+  fill: none;
+  stroke: #9ca3af; /* Darker gray for much better visibility */
+  stroke-width: 3;
+  stroke-dasharray: 8 8;
+  opacity: 0.5;
+  animation: flow-lines 20s linear infinite reverse;
+}
+
+.particle {
+  fill: #ea580c;
+  filter: drop-shadow(0 0 6px rgba(234, 88, 12, 0.8));
+}
+
+.p-core {
+  fill: #3b82f6;
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.8));
+}
+
+.p-2 { animation-delay: 0.5s; }
+.p-3 { animation-delay: 1.2s; }
+.p-5 { animation-delay: 0.7s; }
+.p-7 { animation-delay: 0.9s; }
+
+.iot-html-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.iot-node {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f3f4f6;
+  pointer-events: auto;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+
+.iot-node:hover {
+  transform: translate(-50%, -50%) scale(1.15);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.sensor-node {
+  width: 56px;
+  height: 56px;
+  color: #6b7280;
+}
+
+.sensor-node:hover {
+  border-color: #ea580c;
+  color: #ea580c;
+}
+
+.edge-node {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #ea580c;
+  background: #fffaf7;
+}
+
+.edge-icon {
+  color: #ea580c;
+}
+
+.cloud-node {
+  width: 64px;
+  height: 64px;
+  border: 1px solid #bfdbfe;
+  color: #3b82f6;
+}
+
+.cloud-node:hover {
+  background: #eff6ff;
+}
+
+.client-node {
+  width: 72px;
+  height: 72px;
+  border: 2px solid #10b981;
+}
+
+.client-icon {
+  color: #10b981;
+}
+
+.node-label {
+  position: absolute;
+  bottom: -28px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #374151;
+  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2px 8px;
+  border-radius: 12px;
+  border: 1px solid #f3f4f6;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.data-badge {
+  position: absolute;
+  top: -12px;
+  right: -20px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 10px;
+  color: white;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.processing {
+  background: #ea580c;
+  animation: pulse-badge 2s infinite alternate;
+}
+
+.live {
+  background: #10b981;
+  animation: pulse-badge 1.5s infinite alternate;
+}
+
+.pulse-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #ea580c;
+  opacity: 0;
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.delay-1 { animation-delay: 0.7s; }
+.delay-2 { animation-delay: 1.4s; }
+
+.node-halo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #ea580c;
+  opacity: 0.15;
+  animation: breathe 3s ease-in-out infinite alternate;
+}
+
+.client-halo {
+  background: #10b981;
+  opacity: 0.1;
+}
+
+/* Keyframes */
+@keyframes flow-lines {
+  to { stroke-dashoffset: 120; }
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+@keyframes breathe {
+  0% { transform: scale(1); opacity: 0.15; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+@keyframes pulse-badge {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); box-shadow: 0 0 8px currentColor; }
+}
+
+@keyframes float-blob {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(30px, -50px) scale(1.2); }
+}
+
+/* Responsive Scaling */
+@media (max-width: 768px) {
+  .iot-animation-wrapper {
+    transform: scale(0.6);
+    transform-origin: center center;
+    height: 350px;
+  }
+}

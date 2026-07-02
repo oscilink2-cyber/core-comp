@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Layers, Menu, X, ChevronDown } from 'lucide-react';
 import './Navbar.css';
 
@@ -7,20 +8,26 @@ const Navbar = () => {
   const [activeLink, setActiveLink] = useState('Home');
   const [desktopDropdownOpen, setDesktopDropdownOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === '/') setActiveLink('Home');
+    else if (location.pathname === '/about') setActiveLink('About Us');
+  }, [location]);
 
   return (
     <nav className="navbar">
       <div className="container navbar-container">
         {/* Logo */}
-        <a href="#" className="logo">
+        <Link to="/" className="logo">
           <Layers size={24} className="logo-icon" />
           <span className="logo-text">CoreCompany</span>
-        </a>
+        </Link>
 
         {/* Center Links */}
         <div className="nav-links desktop-nav">
-          <a href="#" className={`nav-link ${activeLink === 'Home' ? 'active' : ''}`} onClick={() => setActiveLink('Home')}>Home</a>
-          <a href="#" className={`nav-link ${activeLink === 'About Us' ? 'active' : ''}`} onClick={() => setActiveLink('About Us')}>About Us</a>
+          <Link to="/" className={`nav-link ${activeLink === 'Home' ? 'active' : ''}`} onClick={() => setActiveLink('Home')}>Home</Link>
+          <Link to="/about" className={`nav-link ${activeLink === 'About Us' ? 'active' : ''}`} onClick={() => setActiveLink('About Us')}>About Us</Link>
           <div 
             className="dropdown-container"
             onMouseEnter={() => setDesktopDropdownOpen(true)}
@@ -64,8 +71,8 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="mobile-menu animate-fade-in">
-          <a href="#" className={`mobile-link ${activeLink === 'Home' ? 'active' : ''}`} onClick={() => { setActiveLink('Home'); setMobileMenuOpen(false); }}>Home</a>
-          <a href="#" className={`mobile-link ${activeLink === 'About Us' ? 'active' : ''}`} onClick={() => { setActiveLink('About Us'); setMobileMenuOpen(false); }}>About Us</a>
+          <Link to="/" className={`mobile-link ${activeLink === 'Home' ? 'active' : ''}`} onClick={() => { setActiveLink('Home'); setMobileMenuOpen(false); }}>Home</Link>
+          <Link to="/about" className={`mobile-link ${activeLink === 'About Us' ? 'active' : ''}`} onClick={() => { setActiveLink('About Us'); setMobileMenuOpen(false); }}>About Us</Link>
           <div className="mobile-dropdown-container">
             <button 
               className={`mobile-link w-full flex-between ${activeLink === 'Products' ? 'active' : ''}`} 

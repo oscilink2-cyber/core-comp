@@ -1,28 +1,21 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import AboutCompany from './components/AboutCompany';
-import WhyChooseUs from './components/WhyChooseUs';
-import Projects from './components/Projects';
-import Capabilities from './components/Capabilities';
-import Features from './components/Features';
-import CtaSection from './components/CtaSection';
+import Home from './pages/Home';
+import About from './pages/About';
 import Footer from './components/Footer';
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
       <main>
-        <Hero />
-        <AboutCompany />
-        <WhyChooseUs />
-        <Projects />
-        <Capabilities />
-        <Features />
-        <CtaSection />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
       </main>
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }
 

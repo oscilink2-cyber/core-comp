@@ -1,4 +1,4 @@
-import { Cpu, Layout, Activity, ShieldCheck } from 'lucide-react';
+import { Cpu, Layout, Activity, ShieldCheck, ArrowRight } from 'lucide-react';
 import './AboutCompany.css';
 
 const AboutCompany = () => {
@@ -37,24 +37,59 @@ const AboutCompany = () => {
         {/* Bottom Features Cards */}
         <div className="about-features-row animate-fade-in delay-300">
           <div className="feature-card">
-            <Cpu className="feature-card-icon" />
-            <h3>IoT & Embedded</h3>
-            <p>Hardware Solutions</p>
+            <div className="fc-icon-wrapper">
+              <Cpu className="feature-card-icon" />
+            </div>
+            <div className="fc-text">
+              <h3>IoT & Embedded</h3>
+              <p>Hardware Solutions</p>
+            </div>
+            <div className="fc-hover-reveal">
+              <span className="fc-link-text">Explore</span>
+              <ArrowRight size={16} />
+            </div>
           </div>
+          
           <div className="feature-card">
-            <Layout className="feature-card-icon" />
-            <h3>Smart Systems</h3>
-            <p>Public Transport</p>
+            <div className="fc-icon-wrapper">
+              <Layout className="feature-card-icon" />
+            </div>
+            <div className="fc-text">
+              <h3>Smart Systems</h3>
+              <p>Public Transport</p>
+            </div>
+            <div className="fc-hover-reveal">
+              <span className="fc-link-text">Explore</span>
+              <ArrowRight size={16} />
+            </div>
           </div>
+          
           <div className="feature-card">
-            <ShieldCheck className="feature-card-icon" />
-            <h3>Custom Software</h3>
-            <p>Enterprise Applications</p>
+            <div className="fc-icon-wrapper">
+              <ShieldCheck className="feature-card-icon" />
+            </div>
+            <div className="fc-text">
+              <h3>Custom Software</h3>
+              <p>Enterprise Applications</p>
+            </div>
+            <div className="fc-hover-reveal">
+              <span className="fc-link-text">Explore</span>
+              <ArrowRight size={16} />
+            </div>
           </div>
+          
           <div className="feature-card">
-            <Activity className="feature-card-icon" />
-            <h3>Real-Time Data</h3>
-            <p>Monitoring & Analytics</p>
+            <div className="fc-icon-wrapper">
+              <Activity className="feature-card-icon" />
+            </div>
+            <div className="fc-text">
+              <h3>Real-Time Data</h3>
+              <p>Monitoring & Analytics</p>
+            </div>
+            <div className="fc-hover-reveal">
+              <span className="fc-link-text">Explore</span>
+              <ArrowRight size={16} />
+            </div>
           </div>
         </div>
 

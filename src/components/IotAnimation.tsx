@@ -3,8 +3,9 @@ import './IotAnimation.css';
 
 const IotAnimation = () => {
   return (
-    <div className="iot-animation-wrapper">
-      <div className="iot-bg-elements">
+    <div className="iot-scale-wrapper">
+      <div className="iot-animation-wrapper">
+        <div className="iot-bg-elements">
         <div className="gradient-blob blob-1"></div>
         <div className="gradient-blob blob-2"></div>
       </div>
@@ -103,6 +104,8 @@ const IotAnimation = () => {
           <span className="node-label">Analytics Dash</span>
           <div className="data-badge live">Live Sync</div>
         </div>
+        
+      </div>
         
       </div>
     </div>

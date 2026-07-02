@@ -1,9 +1,15 @@
-.iot-animation-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 700px;
+.iot-scale-wrapper {
+  width: 600px;
   height: 500px;
   margin: 0 auto;
+}
+
+.iot-animation-wrapper {
+  position: relative;
+  width: 600px;
+  height: 500px;
+  flex-shrink: 0;
+  transform-origin: top left;
 }
 
 .iot-bg-elements {
@@ -241,11 +247,22 @@
   100% { transform: translate(30px, -50px) scale(1.2); }
 }
 
-/* Responsive Scaling */
 @media (max-width: 768px) {
+  .iot-scale-wrapper {
+    width: 420px; /* 600 * 0.7 */
+    height: 350px; /* 500 * 0.7 */
+  }
   .iot-animation-wrapper {
-    transform: scale(0.6);
-    transform-origin: center center;
-    height: 350px;
+    transform: scale(0.7);
+  }
+}
+
+@media (max-width: 480px) {
+  .iot-scale-wrapper {
+    width: 300px; /* 600 * 0.5 */
+    height: 250px; /* 500 * 0.5 */
+  }
+  .iot-animation-wrapper {
+    transform: scale(0.5);
   }
 }

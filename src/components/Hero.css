@@ -102,6 +102,16 @@
   .hero-title {
     font-size: 3rem;
   }
+  
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 1rem;
+  }
+  
+  .hero-actions .btn {
+    width: 100%;
+  }
 }
 
 /* Logo Strip Styles */

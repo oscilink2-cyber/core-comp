@@ -43,12 +43,22 @@
 .nav-link {
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--text-muted);
+  color: var(--text-color);
   transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 .nav-link:hover {
-  color: var(--text-color);
+  color: var(--primary-color);
+}
+
+.nav-link.active {
+  color: var(--primary-color);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
 .nav-actions {
@@ -86,6 +96,13 @@
   font-weight: 500;
   color: var(--text-color);
   border-bottom: 1px solid var(--border-color);
+}
+
+.mobile-link.active {
+  color: var(--primary-color);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
 .mobile-actions {

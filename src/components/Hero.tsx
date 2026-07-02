@@ -9,9 +9,7 @@ const Hero = () => {
 
           {/* Left Content */}
           <div className="hero-content">
-            <div className="hero-badge animate-fade-in">
-              [ BACKED BY <span className="yc-logo">Y</span> COMBINATOR ]
-            </div>
+
 
             <h1 className="hero-title animate-fade-in delay-100">
               Enterprise IoT<br />

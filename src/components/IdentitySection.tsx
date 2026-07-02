@@ -1,3 +1,4 @@
+import { Settings, Bus, Droplet, Landmark } from 'lucide-react';
 import './IdentitySection.css';
 
 const IdentitySection = () => {
@@ -22,10 +23,19 @@ const IdentitySection = () => {
           <div className="identity-group">
             <h3 className="group-title">Associations</h3>
             <div className="logo-row">
-              <div className="logo-placeholder">YES</div>
-              <div className="logo-placeholder">BNI</div>
-              <div className="logo-placeholder">Rotary</div>
-              <div className="logo-placeholder">MADITSSIA</div>
+              <div className="sponsor-logo yes-logo">
+                <span className="yes-main">YES</span>
+                <span className="yes-sub">Young Entrepreneur School</span>
+              </div>
+              <div className="sponsor-logo bni-logo">
+                <span className="bni-text">BNI<span className="bni-reg">&reg;</span></span>
+              </div>
+              <div className="sponsor-logo rotary-logo">
+                <Settings className="rotary-icon" size={48} />
+              </div>
+              <div className="sponsor-logo mad-logo">
+                <div className="mad-box">MADITSSIA</div>
+              </div>
             </div>
           </div>
 
@@ -33,8 +43,18 @@ const IdentitySection = () => {
           <div className="identity-group">
             <h3 className="group-title">Our Subsidiaries</h3>
             <div className="logo-row justify-center">
-              <div className="logo-placeholder wide">Sofia Infotech</div>
-              <div className="logo-placeholder wide">InfoBus</div>
+              <div className="sponsor-logo sofia-logo">
+                <div className="sofia-main">Sofia Infotech</div>
+                <div className="sofia-sub">Tech Enabled Wisdom</div>
+              </div>
+              <div className="infobus-container">
+                <div className="sponsor-logo infobus-logo">
+                  <span className="ib-red">Inf</span>
+                  <Bus className="ib-icon" size={28} />
+                  <span className="ib-red">Bus</span>
+                </div>
+                <span className="ib-sub">Advertising Private Limited</span>
+              </div>
             </div>
           </div>
 
@@ -43,12 +63,37 @@ const IdentitySection = () => {
         {/* Bottom Section: Clients */}
         <div className="identity-group clients-group animate-fade-in delay-200">
           <h3 className="group-title">Clients</h3>
-          <div className="logo-row justify-center flex-wrap">
-            <div className="logo-placeholder wide">Thangamayil</div>
-            <div className="logo-placeholder tall">KSHRC</div>
-            <div className="logo-placeholder wide">LedGeo</div>
-            <div className="logo-placeholder tall">TN Govt</div>
-            <div className="logo-placeholder wide">TripleA</div>
+          <div className="logo-row justify-center flex-wrap" style={{ gap: '4rem' }}>
+            
+            <div className="sponsor-logo tm-logo">
+              <div className="tm-box">
+                <span className="tm-text">தங்கமயில்</span>
+                <span className="tm-sub">Jewellery</span>
+              </div>
+            </div>
+
+            <div className="sponsor-logo kshrc-logo">
+              <Droplet color="#0284c7" size={40} className="kshrc-icon" />
+              <span className="kshrc-main">KSHRC</span>
+              <span className="kshrc-sub">KOKILA SIDDHA HOSPITAL<br/>AND RESEARCH CENTRE</span>
+            </div>
+
+            <div className="sponsor-logo ledgeo-logo">
+              <div className="ledgeo-main">Led<span style={{fontWeight: 400}}>Geo</span></div>
+              <div className="ledgeo-sub">SWITCH ON TO GREEN PLANET</div>
+            </div>
+
+            <div className="sponsor-logo tn-logo">
+              <div className="tn-circle">
+                <Landmark size={36} color="#059669" />
+              </div>
+            </div>
+
+            <div className="sponsor-logo triplea-logo">
+              <span className="ta-main">Triple<span className="ta-a">A</span></span>
+              <span className="ta-sub">Signage</span>
+            </div>
+
           </div>
         </div>
 

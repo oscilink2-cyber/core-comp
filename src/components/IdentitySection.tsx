@@ -16,13 +16,67 @@ const IdentitySection = () => {
           </h2>
         </div>
 
-        {/* Top Grid: Associations & Subsidiaries */}
-        <div className="identity-grid animate-fade-in delay-100">
+        {/* Bento Grid Layout */}
+        <div className="identity-bento-grid animate-fade-in delay-100">
           
-          {/* Associations */}
-          <div className="identity-group">
-            <h3 className="group-title">Associations</h3>
-            <div className="logo-row">
+          {/* Clients Card */}
+          <div className="bento-card col-span-2">
+            <h3 className="bento-title">Clients</h3>
+            <div className="bento-logos-wrap">
+              <div className="sponsor-logo tm-logo">
+                <div className="tm-box">
+                  <span className="tm-text">தங்கமயில்</span>
+                  <span className="tm-sub">Jewellery</span>
+                </div>
+              </div>
+
+              <div className="sponsor-logo kshrc-logo">
+                <Droplet color="#0284c7" size={40} className="kshrc-icon" />
+                <span className="kshrc-main">KSHRC</span>
+                <span className="kshrc-sub">KOKILA SIDDHA HOSPITAL<br/>AND RESEARCH CENTRE</span>
+              </div>
+
+              <div className="sponsor-logo ledgeo-logo">
+                <div className="ledgeo-main">Led<span style={{fontWeight: 400}}>Geo</span></div>
+                <div className="ledgeo-sub">SWITCH ON TO GREEN PLANET</div>
+              </div>
+
+              <div className="sponsor-logo tn-logo">
+                <div className="tn-circle">
+                  <Landmark size={36} color="#059669" />
+                </div>
+              </div>
+
+              <div className="sponsor-logo triplea-logo">
+                <span className="ta-main">Triple<span className="ta-a">A</span></span>
+                <span className="ta-sub">Signage</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Subsidiaries Card */}
+          <div className="bento-card col-span-1">
+            <h3 className="bento-title">Our Subsidiaries</h3>
+            <div className="bento-logos-wrap vertical">
+              <div className="sponsor-logo sofia-logo">
+                <div className="sofia-main">Sofia Infotech</div>
+                <div className="sofia-sub">Tech Enabled Wisdom</div>
+              </div>
+              <div className="infobus-container">
+                <div className="sponsor-logo infobus-logo">
+                  <span className="ib-red">Inf</span>
+                  <Bus className="ib-icon" size={28} />
+                  <span className="ib-red">Bus</span>
+                </div>
+                <span className="ib-sub">Advertising Private Limited</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Associations Card */}
+          <div className="bento-card col-span-3">
+            <h3 className="bento-title">Associations</h3>
+            <div className="bento-logos-wrap horizontal">
               <div className="sponsor-logo yes-logo">
                 <span className="yes-main">YES</span>
                 <span className="yes-sub">Young Entrepreneur School</span>
@@ -39,62 +93,6 @@ const IdentitySection = () => {
             </div>
           </div>
 
-          {/* Subsidiaries */}
-          <div className="identity-group">
-            <h3 className="group-title">Our Subsidiaries</h3>
-            <div className="logo-row justify-center">
-              <div className="sponsor-logo sofia-logo">
-                <div className="sofia-main">Sofia Infotech</div>
-                <div className="sofia-sub">Tech Enabled Wisdom</div>
-              </div>
-              <div className="infobus-container">
-                <div className="sponsor-logo infobus-logo">
-                  <span className="ib-red">Inf</span>
-                  <Bus className="ib-icon" size={28} />
-                  <span className="ib-red">Bus</span>
-                </div>
-                <span className="ib-sub">Advertising Private Limited</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        {/* Bottom Section: Clients */}
-        <div className="identity-group clients-group animate-fade-in delay-200">
-          <h3 className="group-title">Clients</h3>
-          <div className="logo-row justify-center flex-wrap" style={{ gap: '4rem' }}>
-            
-            <div className="sponsor-logo tm-logo">
-              <div className="tm-box">
-                <span className="tm-text">தங்கமயில்</span>
-                <span className="tm-sub">Jewellery</span>
-              </div>
-            </div>
-
-            <div className="sponsor-logo kshrc-logo">
-              <Droplet color="#0284c7" size={40} className="kshrc-icon" />
-              <span className="kshrc-main">KSHRC</span>
-              <span className="kshrc-sub">KOKILA SIDDHA HOSPITAL<br/>AND RESEARCH CENTRE</span>
-            </div>
-
-            <div className="sponsor-logo ledgeo-logo">
-              <div className="ledgeo-main">Led<span style={{fontWeight: 400}}>Geo</span></div>
-              <div className="ledgeo-sub">SWITCH ON TO GREEN PLANET</div>
-            </div>
-
-            <div className="sponsor-logo tn-logo">
-              <div className="tn-circle">
-                <Landmark size={36} color="#059669" />
-              </div>
-            </div>
-
-            <div className="sponsor-logo triplea-logo">
-              <span className="ta-main">Triple<span className="ta-a">A</span></span>
-              <span className="ta-sub">Signage</span>
-            </div>
-
-          </div>
         </div>
 
       </div>

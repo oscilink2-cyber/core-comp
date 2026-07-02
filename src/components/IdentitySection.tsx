@@ -22,6 +22,7 @@ const IdentitySection = () => {
           {/* Associations Card (Top Left) */}
           <div className="bento-card col-span-2">
             <h3 className="bento-title">Associations</h3>
+            <p className="bento-desc">Proud members of industry-leading organizations driving innovation and excellence.</p>
             <div className="bento-logos-wrap horizontal">
               <div className="sponsor-logo yes-logo">
                 <span className="yes-main">YES</span>
@@ -42,6 +43,7 @@ const IdentitySection = () => {
           {/* Subsidiaries Card (Top Right) */}
           <div className="bento-card col-span-1">
             <h3 className="bento-title">Our Subsidiaries</h3>
+            <p className="bento-desc">Specialized ventures delivering targeted technological solutions.</p>
             <div className="bento-logos-wrap vertical">
               <div className="sponsor-logo sofia-logo">
                 <div className="sofia-main">Sofia Infotech</div>
@@ -61,6 +63,7 @@ const IdentitySection = () => {
           {/* Clients Card (Bottom Full Width) */}
           <div className="bento-card col-span-3" style={{ overflow: 'hidden' }}>
             <h3 className="bento-title">Clients</h3>
+            <p className="bento-desc">Trusted by industry leaders and government institutions to deliver mission-critical solutions.</p>
             <div className="marquee-container">
               <div className="marquee-content">
                 

@@ -1,4 +1,3 @@
-import { Cpu, Layout, Activity, ShieldCheck, ArrowRight } from 'lucide-react';
 import './AboutCompany.css';
 
 const AboutCompany = () => {
@@ -27,6 +26,7 @@ const AboutCompany = () => {
           <p className="about-description">
             Our flagship GPS-based bus stop announcement system is successfully deployed in Tamil Nadu Government buses, demonstrating our capability to deliver reliable, large-scale IoT solutions. With strong in-house expertise and a customer-centric approach, Silicon Harvest delivers scalable, secure, and innovative systems that drive sustainable digital transformation.
           </p>
+        </div>
       </div>
     </section>
   );

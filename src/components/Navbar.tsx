@@ -21,7 +21,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="logo">
           <Layers size={24} className="logo-icon" />
-          <span className="logo-text">CoreCompany</span>
+          <span className="logo-text">Silicon Harvest</span>
         </Link>
 
         {/* Center Links */}

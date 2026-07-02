@@ -20,36 +20,71 @@ const IdentitySection = () => {
         <div className="identity-bento-grid animate-fade-in delay-100">
           
           {/* Clients Card */}
-          <div className="bento-card col-span-2">
+          <div className="bento-card col-span-2" style={{ overflow: 'hidden' }}>
             <h3 className="bento-title">Clients</h3>
-            <div className="bento-logos-wrap">
-              <div className="sponsor-logo tm-logo">
-                <div className="tm-box">
-                  <span className="tm-text">தங்கமயில்</span>
-                  <span className="tm-sub">Jewellery</span>
+            <div className="marquee-container">
+              <div className="marquee-content">
+                
+                {/* First Set */}
+                <div className="sponsor-logo tm-logo">
+                  <div className="tm-box">
+                    <span className="tm-text">தங்கமயில்</span>
+                    <span className="tm-sub">Jewellery</span>
+                  </div>
                 </div>
-              </div>
 
-              <div className="sponsor-logo kshrc-logo">
-                <Droplet color="#0284c7" size={40} className="kshrc-icon" />
-                <span className="kshrc-main">KSHRC</span>
-                <span className="kshrc-sub">KOKILA SIDDHA HOSPITAL<br/>AND RESEARCH CENTRE</span>
-              </div>
-
-              <div className="sponsor-logo ledgeo-logo">
-                <div className="ledgeo-main">Led<span style={{fontWeight: 400}}>Geo</span></div>
-                <div className="ledgeo-sub">SWITCH ON TO GREEN PLANET</div>
-              </div>
-
-              <div className="sponsor-logo tn-logo">
-                <div className="tn-circle">
-                  <Landmark size={36} color="#059669" />
+                <div className="sponsor-logo kshrc-logo">
+                  <Droplet color="#0284c7" size={40} className="kshrc-icon" />
+                  <span className="kshrc-main">KSHRC</span>
+                  <span className="kshrc-sub">KOKILA SIDDHA HOSPITAL<br/>AND RESEARCH CENTRE</span>
                 </div>
-              </div>
 
-              <div className="sponsor-logo triplea-logo">
-                <span className="ta-main">Triple<span className="ta-a">A</span></span>
-                <span className="ta-sub">Signage</span>
+                <div className="sponsor-logo ledgeo-logo">
+                  <div className="ledgeo-main">Led<span style={{fontWeight: 400}}>Geo</span></div>
+                  <div className="ledgeo-sub">SWITCH ON TO GREEN PLANET</div>
+                </div>
+
+                <div className="sponsor-logo tn-logo">
+                  <div className="tn-circle">
+                    <Landmark size={36} color="#059669" />
+                  </div>
+                </div>
+
+                <div className="sponsor-logo triplea-logo">
+                  <span className="ta-main">Triple<span className="ta-a">A</span></span>
+                  <span className="ta-sub">Signage</span>
+                </div>
+
+                {/* Second Set (Duplicated for seamless loop) */}
+                <div className="sponsor-logo tm-logo">
+                  <div className="tm-box">
+                    <span className="tm-text">தங்கமயில்</span>
+                    <span className="tm-sub">Jewellery</span>
+                  </div>
+                </div>
+
+                <div className="sponsor-logo kshrc-logo">
+                  <Droplet color="#0284c7" size={40} className="kshrc-icon" />
+                  <span className="kshrc-main">KSHRC</span>
+                  <span className="kshrc-sub">KOKILA SIDDHA HOSPITAL<br/>AND RESEARCH CENTRE</span>
+                </div>
+
+                <div className="sponsor-logo ledgeo-logo">
+                  <div className="ledgeo-main">Led<span style={{fontWeight: 400}}>Geo</span></div>
+                  <div className="ledgeo-sub">SWITCH ON TO GREEN PLANET</div>
+                </div>
+
+                <div className="sponsor-logo tn-logo">
+                  <div className="tn-circle">
+                    <Landmark size={36} color="#059669" />
+                  </div>
+                </div>
+
+                <div className="sponsor-logo triplea-logo">
+                  <span className="ta-main">Triple<span className="ta-a">A</span></span>
+                  <span className="ta-sub">Signage</span>
+                </div>
+
               </div>
             </div>
           </div>

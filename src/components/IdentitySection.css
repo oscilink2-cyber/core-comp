@@ -72,6 +72,37 @@
   gap: 5rem;
 }
 
+/* Marquee Styles */
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+.marquee-content {
+  display: flex;
+  width: max-content;
+  animation: scrollLeft 30s linear infinite;
+  gap: 4rem;
+  padding-right: 4rem; /* Match gap for seamless loop */
+  align-items: center;
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 @media (max-width: 1024px) {
   .identity-bento-grid {
     grid-template-columns: 1fr;

@@ -19,8 +19,47 @@ const IdentitySection = () => {
         {/* Bento Grid Layout */}
         <div className="identity-bento-grid animate-fade-in delay-100">
           
-          {/* Clients Card */}
-          <div className="bento-card col-span-2" style={{ overflow: 'hidden' }}>
+          {/* Associations Card (Top Left) */}
+          <div className="bento-card col-span-2">
+            <h3 className="bento-title">Associations</h3>
+            <div className="bento-logos-wrap horizontal">
+              <div className="sponsor-logo yes-logo">
+                <span className="yes-main">YES</span>
+                <span className="yes-sub">Young Entrepreneur School</span>
+              </div>
+              <div className="sponsor-logo bni-logo">
+                <span className="bni-text">BNI<span className="bni-reg">&reg;</span></span>
+              </div>
+              <div className="sponsor-logo rotary-logo">
+                <Settings className="rotary-icon" size={48} />
+              </div>
+              <div className="sponsor-logo mad-logo">
+                <div className="mad-box">MADITSSIA</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Subsidiaries Card (Top Right) */}
+          <div className="bento-card col-span-1">
+            <h3 className="bento-title">Our Subsidiaries</h3>
+            <div className="bento-logos-wrap vertical">
+              <div className="sponsor-logo sofia-logo">
+                <div className="sofia-main">Sofia Infotech</div>
+                <div className="sofia-sub">Tech Enabled Wisdom</div>
+              </div>
+              <div className="infobus-container">
+                <div className="sponsor-logo infobus-logo">
+                  <span className="ib-red">Inf</span>
+                  <Bus className="ib-icon" size={28} />
+                  <span className="ib-red">Bus</span>
+                </div>
+                <span className="ib-sub">Advertising Private Limited</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Clients Card (Bottom Full Width) */}
+          <div className="bento-card col-span-3" style={{ overflow: 'hidden' }}>
             <h3 className="bento-title">Clients</h3>
             <div className="marquee-container">
               <div className="marquee-content">
@@ -85,45 +124,6 @@ const IdentitySection = () => {
                   <span className="ta-sub">Signage</span>
                 </div>
 
-              </div>
-            </div>
-          </div>
-
-          {/* Subsidiaries Card */}
-          <div className="bento-card col-span-1">
-            <h3 className="bento-title">Our Subsidiaries</h3>
-            <div className="bento-logos-wrap vertical">
-              <div className="sponsor-logo sofia-logo">
-                <div className="sofia-main">Sofia Infotech</div>
-                <div className="sofia-sub">Tech Enabled Wisdom</div>
-              </div>
-              <div className="infobus-container">
-                <div className="sponsor-logo infobus-logo">
-                  <span className="ib-red">Inf</span>
-                  <Bus className="ib-icon" size={28} />
-                  <span className="ib-red">Bus</span>
-                </div>
-                <span className="ib-sub">Advertising Private Limited</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Associations Card */}
-          <div className="bento-card col-span-3">
-            <h3 className="bento-title">Associations</h3>
-            <div className="bento-logos-wrap horizontal">
-              <div className="sponsor-logo yes-logo">
-                <span className="yes-main">YES</span>
-                <span className="yes-sub">Young Entrepreneur School</span>
-              </div>
-              <div className="sponsor-logo bni-logo">
-                <span className="bni-text">BNI<span className="bni-reg">&reg;</span></span>
-              </div>
-              <div className="sponsor-logo rotary-logo">
-                <Settings className="rotary-icon" size={48} />
-              </div>
-              <div className="sponsor-logo mad-logo">
-                <div className="mad-box">MADITSSIA</div>
               </div>
             </div>
           </div>

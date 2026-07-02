@@ -165,4 +165,13 @@
   .projects-grid {
     grid-template-columns: 1fr;
   }
+
+  .projects-footer {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  
+  .btn-see-all {
+    width: 100%;
+  }
 }

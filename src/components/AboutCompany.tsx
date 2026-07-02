@@ -7,8 +7,8 @@ const AboutCompany = () => {
         
         {/* Header Section */}
         <div className="about-header animate-fade-in">
-          <div className="section-badge" style={{ textTransform: 'none', fontWeight: 700, letterSpacing: 'normal', color: '#000' }}>
-            Who We Are
+          <div className="bracket-badge">
+            [ WHO WE ARE ]
           </div>
           <h2 className="about-title" style={{ fontSize: '3rem' }}>
             Connecting Hardware, Software, and Intelligence

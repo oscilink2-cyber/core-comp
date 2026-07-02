@@ -16,16 +16,13 @@
   align-items: center;
 }
 
-.section-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-  font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  color: #374151;
-  margin-bottom: 2rem;
+.bracket-badge {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #475569;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
+  margin-bottom: 1.5rem;
 }
 
 .about-title {

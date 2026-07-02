@@ -11,6 +11,15 @@
   align-items: center;
 }
 
+.bracket-badge {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #475569;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
 .identity-title {
   font-size: 2.5rem;
   font-weight: 800;

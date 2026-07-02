@@ -8,8 +8,8 @@ const IdentitySection = () => {
         
         {/* Header Section */}
         <div className="identity-header animate-fade-in">
-          <div className="section-badge" style={{ textTransform: 'none', fontWeight: 700, letterSpacing: 'normal', color: '#000' }}>
-            Our Identity
+          <div className="bracket-badge">
+            [ OUR IDENTITY ]
           </div>
           <h2 className="identity-title">
             A Symbol of Innovation, Intelligence, and Trust
